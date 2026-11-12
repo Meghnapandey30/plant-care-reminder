@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Care Reminder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌿 Plant Care</h1>
+        <p>Your little green companions deserve love!</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('plants')">My Plants</button>
+        <button onclick="showSection('reminders')">Reminders</button>
+    </nav>
+
+    <main>
+
+        <section id="dashboard" class="section">
+            <h2>Welcome to Your Plant Garden 🌱</h2>
+
+            <div class="stats">
+                <div class="card">
+                    <h3>Total Plants</h3>
+                    <p id="totalPlants">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Today's Tasks</h3>
+                    <p id="totalTasks">0</p>
+                </div>
+            </div>
+
+            <h2>My Green Friends</h2>
+            <div id="plantList" class="plant-list"></div>
+        </section>
+
+        <section id="plants" class="section hidden">
+            <h2>Add a New Plant 🌿</h2>
+
+            <form id="plantForm">
+                <input type="text" id="plantName"
+                    placeholder="Enter plant name" required>
+
+                <input type="text" id="plantType"
+                    placeholder="Enter plant type" required>
+
+                <label>Next watering date:</label>
+                <input type="date" id="waterDate" required>
+
+                <button type="submit">Add Plant</button>
+            </form>
+        </section>
+
+        <section id="reminders" class="section hidden">
+            <h2>Plant Care Reminders 💧</h2>
+            <div id="reminderList"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made with 💚 for a greener world.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
